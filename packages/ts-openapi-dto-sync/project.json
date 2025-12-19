@@ -1,0 +1,31 @@
+{
+  "name": "ts-openapi-dto-sync",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/ts-openapi-dto-sync/src",
+  "projectType": "library",
+  "release": {
+    "version": {
+      "manifestRootsToUpdate": ["dist/{projectRoot}"],
+      "currentVersionResolver": "git-tag",
+      "fallbackCurrentVersionResolver": "disk"
+    }
+  },
+  "tags": ["scope:ts-openapi-dto-sync", "type:library"],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/ts-openapi-dto-sync",
+        "main": "packages/ts-openapi-dto-sync/src/index.ts",
+        "tsConfig": "packages/ts-openapi-dto-sync/tsconfig.lib.json",
+        "assets": ["packages/ts-openapi-dto-sync/*.md"]
+      }
+    },
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "dist/{projectRoot}"
+      }
+    }
+  }
+}
