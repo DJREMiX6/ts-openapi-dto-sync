@@ -1,17 +1,20 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "esnext",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "importHelpers": true,
     "noImplicitOverride": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "noPropertyAccessFromIndexSignature": true
+    "noPropertyAccessFromIndexSignature": true,
+    "types": ["node"],
+    "moduleResolution": "bundler"
   },
   "files": [],
   "include": [],
+  "exclude": [],
   "references": [
     {
       "path": "./tsconfig.lib.json"

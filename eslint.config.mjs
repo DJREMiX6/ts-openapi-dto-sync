@@ -20,6 +20,10 @@ export default [
               sourceTag: '*',
               onlyDependOnLibsWithTags: ['*'],
             },
+            {
+              "sourceTag": "type:lib",
+              "onlyDependOnLibsWithTags": ["type:lib"]
+            }
           ],
         },
       ],
